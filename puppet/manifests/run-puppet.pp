@@ -4,6 +4,12 @@ file { '/usr/local/bin/run-puppet':
   mode   => '0755',
 }
 
+file { '/tmp/test.txt':
+  content => 'Testing puppet',
+  mode   => '0755',
+}
+
+
 cron { 'run-puppet':
   command => '/usr/local/bin/run-puppet',
   hour    => '*',
